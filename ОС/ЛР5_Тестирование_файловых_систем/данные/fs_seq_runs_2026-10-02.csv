@@ -1,0 +1,9 @@
+fs,run,seq_write_mibs,seq_read_mibs
+ext4,1,2016,1326
+ext4,2,1399,3413
+xfs,1,2016,2207
+xfs,2,1571,2265
+btrfs,1,546,2535
+btrfs,2,49,1497
+f2fs,1,1842,4197
+f2fs,2,1225,3657

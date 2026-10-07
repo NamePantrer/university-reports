@@ -1,0 +1,29 @@
+# временные файлы конвертации и офисные блокировки
+~$*.docx
+~$*.xlsx
+~$*.pptx
+.~lock.*#
+*.tmp
+*.bak
+pdfcheck/
+_conv/
+
+# системные
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# результаты сборки и прогонов
+код/**/*.o
+ОС/ЛР4_Планировщик_ввода-вывода/код/odirect_latency
+ОС/ЛР4_Планировщик_ввода-вывода/код/parallel_direct_read
+ОС/ЛР6_malloc_free_и_аллокаторы/код/malloc_bench
+ОС/ЛР6_malloc_free_и_аллокаторы/код/*.csv
+ОС/ЛР6_malloc_free_и_аллокаторы/код/compare_*.png
+fs_bench_*.csv
+control_series_*.csv
+*.db

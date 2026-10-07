@@ -1,0 +1,5 @@
+fs,seq_write_mibs,seq_read_mibs,rand_read_iops,rand_write_iops,create_fps,delete_fps,mkfs_s
+ext4,1707,2370,11273,16898,31573,60375,0.067
+xfs,1793,2236,10838,17011,15066,19250,0.036
+btrfs,297,2016,8570,7963,2607,25920,0.103
+f2fs,1533,3927,11084,16848,41898,72544,0.034

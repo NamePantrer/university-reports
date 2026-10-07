@@ -1,0 +1,21 @@
+From: Lab4 OS (ITMO, FBIT)
+Subject: [PATCH] block/kyber: default read latency target 1 ms instead of 2 ms
+
+Усиленный вариант ЛР4: целевая задержка чтения Kyber по умолчанию
+уменьшена с 2 мс до 1 мс. Константа копируется в
+kqd->latency_targets[KYBER_READ] при подключении планировщика к очереди
+(kyber_queue_data_alloc), то есть действует так же, как запись
+1000000 в /sys/block/<disk>/queue/iosched/read_lat_nsec на работающем ядре.
+
+---
+--- a/block/kyber-iosched.c	2026-10-08 02:05:00.904362579 +0300
++++ b/block/kyber-iosched.c	2026-10-08 02:05:00.908362562 +0300
+@@ -67,7 +67,7 @@
+  * Default latency targets for each scheduling domain.
+  */
+ static const u64 kyber_latency_targets[] = {
+-	[KYBER_READ] = 2ULL * NSEC_PER_MSEC,
++	[KYBER_READ] = 1ULL * NSEC_PER_MSEC,
+ 	[KYBER_WRITE] = 10ULL * NSEC_PER_MSEC,
+ 	[KYBER_DISCARD] = 5ULL * NSEC_PER_SEC,
+ };
